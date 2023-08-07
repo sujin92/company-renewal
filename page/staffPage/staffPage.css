@@ -1,0 +1,1384 @@
+/* http://meyerweb.com/eric/tools/css/reset/ 
+  v2.0 | 20110126
+  License: none (public domain)
+*/
+
+html,
+body,
+div,
+span,
+applet,
+object,
+iframe,
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+p,
+blockquote,
+pre,
+a,
+abbr,
+acronym,
+address,
+big,
+cite,
+code,
+del,
+dfn,
+em,
+img,
+ins,
+kbd,
+q,
+s,
+samp,
+small,
+strike,
+strong,
+sub,
+sup,
+tt,
+var,
+b,
+u,
+i,
+center,
+dl,
+dt,
+dd,
+ol,
+ul,
+li,
+fieldset,
+form,
+label,
+legend,
+table,
+caption,
+tbody,
+tfoot,
+thead,
+tr,
+th,
+td,
+article,
+aside,
+canvas,
+details,
+embed,
+figure,
+figcaption,
+footer,
+header,
+hgroup,
+menu,
+nav,
+output,
+ruby,
+section,
+summary,
+time,
+mark,
+audio,
+video,
+button {
+  margin: 0;
+  padding: 0;
+  border: 0;
+  font-size: 100%;
+  font: inherit;
+  vertical-align: baseline;
+  text-decoration: none;
+  font-family: "Noto Sans KR", sans-serif;
+}
+/* HTML5 display-role reset for older browsers */
+article,
+aside,
+details,
+figcaption,
+figure,
+footer,
+header,
+hgroup,
+menu,
+nav,
+section {
+  display: block;
+}
+body {
+  line-height: 1;
+}
+ol,
+ul,
+li {
+  list-style: none;
+}
+blockquote,
+q {
+  quotes: none;
+}
+blockquote:before,
+blockquote:after,
+q:before,
+q:after {
+  content: "";
+  content: none;
+}
+table {
+  border-collapse: collapse;
+  border-spacing: 0;
+}
+form,
+input {
+  border: none;
+}
+
+/* companyPage css */
+#staff {
+  position: relative;
+  width: 100%;
+  color: #333333;
+}
+
+.staffImg {
+  background-image: url(/images/staff_background.jpg);
+  width: 100%;
+  height: 550px;
+  position: relative;
+  background-repeat: no-repeat;
+  background-size: 100% 550px;
+  background-position: center;
+  animation: grow 1s linear 1;
+}
+
+@keyframes grow {
+  0% {
+    background-size: 103% 550px;
+  }
+  100% {
+    background-size: 100% 550px;
+  }
+}
+
+.staffTop {
+  position: relative;
+}
+
+.staffTop h2 {
+  width: 100%;
+  position: absolute;
+  top: 50%;
+  transform: translate(0, -50%);
+  text-align: center;
+  font-size: 48px;
+  font-weight: 600;
+  color: #fff;
+}
+
+.tabWrap {
+  position: absolute;
+  width: 100%;
+  height: 70px;
+  left: 0;
+  border-bottom: 1px solid #c1c1c1c1;
+}
+
+.tab {
+  width: 1200px;
+  height: 70px;
+  margin: 0 auto;
+}
+
+.tab ul {
+  display: flex;
+  justify-content: space-between;
+}
+
+.tab ul li {
+  width: 300px;
+  font-size: 19px;
+  font-weight: 600;
+  margin-top: 25px;
+  cursor: pointer;
+  text-align: center;
+}
+
+.tab ul li a {
+  height: 45px;
+  display: block;
+}
+
+.tab ul li .tablinks.active::after {
+  content: "";
+  display: block;
+  width: 300px;
+  border-bottom: 3px solid #cd1319;
+  padding-bottom: 25px;
+}
+
+.dropdownMobile {
+  display: none;
+}
+
+/* tab 컨텐츠 */
+.tabcontent {
+  display: none;
+  animation: fadeEffect 1s;
+}
+
+@keyframes fadeEffect {
+  from {
+    opacity: 0;
+  }
+  to {
+    opacity: 1;
+  }
+}
+
+.typeSection01 {
+  width: 1200px;
+  margin: 0 auto;
+  text-align: center;
+}
+
+.typeText {
+  margin-bottom: 50px;
+}
+
+.typeText h2 {
+  padding: 150px 0 80px 0;
+  font-size: 28px;
+  font-weight: 600;
+}
+
+.typeText h2 span {
+  color: #cd1319;
+  font-size: 48px;
+}
+
+.typeTop {
+  position: relative;
+}
+
+.typeTop h2 {
+  font-size: 30px;
+  margin: 50px 0 100px;
+  line-height: 50px;
+}
+
+.typeTop h2 span {
+  color: #cd1319;
+  font-weight: 600;
+}
+
+.typeBottom {
+  position: relative;
+  display: flex;
+  justify-content: space-between;
+}
+
+.typeBottom .typeBottomBox {
+  width: 300px;
+  margin-bottom: 80px;
+}
+
+.typeBottom .typeBottomBox:nth-child(2n) {
+  margin-top: 150px;
+}
+
+.typeBottom .typeBottomBox h3 {
+  font-size: 22px;
+  font-weight: 600;
+  margin-bottom: 20px;
+}
+
+.typeBottom .typeBottomBox h4 {
+  position: absolute;
+  top: 96px;
+  margin-left: 100px;
+  line-height: 26px;
+  font-size: 16px;
+  color: #fff;
+  font-weight: 500;
+}
+
+.typeBottom .typeBottomBox .position01 {
+  top: 246px;
+  margin-left: 115px;
+  color: #333333;
+}
+
+.typeBottom .typeBottomBox .position02 {
+  margin-left: 110px;
+}
+
+.typeBottom .typeBottomBox .position03 {
+  top: 246px;
+  margin-left: 112px;
+  color: #333333;
+}
+
+.typeBottom .typeBottomBox p {
+  font-size: 16px;
+  line-height: 26px;
+  margin: 30px 0;
+}
+
+.typeBottom .typeBottomBox p > span {
+  font-weight: 500;
+}
+
+.typeBottom > span {
+  position: absolute;
+  width: 1px;
+  height: 282px;
+  background-color: #e2e2e2;
+}
+
+.typeBottom .diagonal01 {
+  transform: rotate(-36deg);
+  top: 55px;
+  margin-left: 298px;
+}
+
+.typeBottom .diagonal02 {
+  transform: rotate(36deg);
+  top: 55px;
+  margin-left: 599px;
+}
+
+.typeBottom .diagonal03 {
+  transform: rotate(-36deg);
+  top: 55px;
+  margin-left: 899px;
+}
+
+/* 채용 안내 */
+.recruitmentSection01 {
+  width: 1200px;
+  margin: 0 auto;
+  text-align: center;
+  height: auto;
+}
+
+.recImg {
+  background-color: #f2f2f2;
+  width: 100%;
+  height: 530px;
+  position: absolute;
+  left: 0;
+  top: 840px;
+  z-index: -1;
+}
+
+.recText {
+  display: flex;
+  margin-top: 80px;
+}
+
+.recText h3 {
+  font-size: 32px;
+  font-weight: 500;
+  margin-left: 20px;
+}
+
+.recruitmentTop .recruitmentInner {
+  display: flex;
+  justify-content: space-between;
+  height: 290px;
+  margin-top: 60px;
+  border-top: 1px solid #c1c1c1c1;
+  border-bottom: 1px solid #c1c1c1c1;
+}
+
+.recruitmentTop .recruitmentInner > div {
+  width: 300px;
+  height: 290px;
+}
+
+.recruitmentTop .recruitmentInner > div img {
+  margin-top: 60px;
+}
+
+.recruitmentTop .recruitmentInner > div h4 {
+  font-size: 23px;
+  margin-top: 30px;
+}
+
+.recruitmentTop .recruitmentInner i {
+  position: absolute;
+  margin-left: 130px;
+  top: 1130px;
+  border: 1px solid #bfbfbf;
+  background-color: #bfbfbf;
+  font-size: 25px;
+  width: 40px;
+  height: 40px;
+  text-align: center;
+  line-height: 40px;
+  border-radius: 50%;
+}
+
+.recruitmentTop .recruitmentInner .last {
+  color: #fff;
+  border: 1px solid #cd1319;
+  background-color: #cd1319;
+}
+
+.recruitmentTop .recruitmentInner > div:last-of-type {
+  background-color: #333333;
+}
+
+.recruitmentTop .recruitmentInner > div:last-of-type h4 {
+  font-size: 28px;
+  font-weight: 500;
+  color: #fff;
+}
+
+.recruitmentBottom {
+  display: flex;
+  text-align: left;
+  justify-content: space-between;
+  margin: 80px 0;
+}
+
+.recruitmentLeft {
+  width: 50%;
+}
+
+.recruitmentRight {
+  width: 50%;
+}
+
+.recText02,
+.recText03 {
+  margin-bottom: 30px;
+  padding-bottom: 30px;
+}
+
+.recText02 {
+  border-bottom: 1px solid #c1c1c1c1;
+}
+
+.recText03 {
+  border-bottom: 1px solid #cd1319;
+}
+
+.recruitmentBottom h4 {
+  font-size: 23px;
+  font-weight: 500;
+  margin: 15px 0;
+  line-height: 35px;
+  padding: 0 10px;
+  text-indent: -14px;
+  word-break: keep-all;
+}
+
+.recruitmentBottom h4 strong {
+  margin-left: 15px;
+}
+
+.recruitmentBottom span {
+  color: #cd1319;
+  font-weight: 900;
+  margin-right: 5px;
+}
+
+/* 복리후생 */
+.welImg {
+  width: 100%;
+  height: 530px;
+  position: absolute;
+  left: 0;
+  top: 840px;
+  z-index: -55;
+  background-image: url(/images/welfare_back.jpg);
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: cover;
+}
+
+.welfareInner h3 {
+  font-size: 36px;
+  color: #fff;
+  line-height: 79px;
+  margin-top: 110px;
+}
+
+.welfareBox {
+  display: flex;
+  justify-content: space-between;
+}
+
+.welfareBox div {
+  width: 280px;
+  height: 400px;
+  margin: 75px 0;
+  background-color: rgba(255, 255, 255, 0.9);
+  box-shadow: 0 3px 6px rgba(0, 0, 0, 0.16), 0 3px 6px rgba(0, 0, 0, 0.23);
+}
+
+.welfareBox div img {
+  margin: 30px 0 40px;
+}
+
+.welfareBox div h4 {
+  font-size: 23px;
+  color: #cd1319;
+  font-weight: 500;
+}
+
+.welfareBox div h4::after {
+  content: "";
+  display: block;
+  width: 60px;
+  border-bottom: 3px solid #cd1319;
+  margin: 0 auto;
+  padding-bottom: 18px;
+  z-index: 50;
+}
+
+.welfareBox div p {
+  font-size: 18px;
+  margin: 15px 0;
+}
+
+.welfareBox div h5 {
+  margin-top: -10px;
+  font-size: 15px;
+  color: #878787;
+  word-break: keep-all;
+}
+
+/*미디어쿼리*/
+@media (max-width: 1290px) {
+  .tab {
+    width: 1025px;
+  }
+  .tab ul li {
+    width: 341px;
+  }
+  .tab ul li .tablinks.active::after {
+    width: 341px;
+  }
+
+  .typeSection01 {
+    width: 1025px;
+  }
+  .typeBottom .typeBottomBox {
+    width: 256px;
+  }
+  .typeBottom .typeBottomBox h4 {
+    margin-left: 78px;
+  }
+  .typeBottom .typeBottomBox .position01 {
+    margin-left: 95px;
+  }
+  
+  .typeBottom .typeBottomBox .position02 {
+    margin-left: 87px;
+  }
+  
+  .typeBottom .typeBottomBox .position03 {
+    margin-left: 90px;
+  }
+  
+  .typeBottom .typeBottomBox p {
+    font-size: 14px;
+    line-height: 24px;
+  }
+  .typeBottom .diagona {
+    display: none;
+  }
+  
+  /* 채용 안내 */
+  .recruitmentSection01 {
+    width: 1025px;
+  }
+  
+  .recImg {
+    height: 530px;
+    top: 840px;
+  }
+  .recruitmentTop .recruitmentInner > div {
+    width: 256px;
+  }
+  .recruitmentTop .recruitmentInner i {
+    margin-left: 108px;
+  }
+  .recruitmentBottom h4 {
+    font-size: 20px;
+  }
+
+  /* 복리후생 */
+  .welfareBox div {
+    width: 236px;
+  }
+}
+
+@media (max-width: 1024px) {
+  .tab {
+    width: 961px;
+  }
+  .tab ul li {
+    width: 320px;
+  }
+  .tab ul li .tablinks.active::after {
+    width: 320px;
+  }
+
+  .typeSection01 {
+    width: 961px;
+  }
+  .typeBottom .typeBottomBox {
+    width: 240px;
+  }
+  .typeBottom .typeBottomBox h4 {
+    margin-left: 70px;
+  }
+  .typeBottom .typeBottomBox .position01 {
+    margin-left: 87px;
+  }
+  
+  .typeBottom .typeBottomBox .position02 {
+    margin-left: 79px;
+  }
+  
+  .typeBottom .typeBottomBox .position03 {
+    margin-left: 82px;
+  }
+  
+  /* 채용 안내 */
+  .recruitmentSection01 {
+    width: 961px;
+  }
+
+  .recruitmentTop .recruitmentInner > div {
+    width: 240px;
+  }
+  .recruitmentTop .recruitmentInner i {
+    margin-left: 100px;
+  }
+
+  /* 복리후생 */
+  .welfareBox div {
+    width: 220px;
+  }
+}
+
+@media (max-width: 960px) {
+  .tab {
+    width: 768px;
+  }
+  .tab ul li {
+    width: 256px;
+  }
+  .tab ul li .tablinks.active::after {
+    width: 256px;
+  }
+
+  .typeSection01 {
+    width: 768px;
+  }
+  .typeBottom .typeBottomBox {
+    width: 192px;
+  }
+  .typeBottom .typeBottomBox h4 {
+    margin-left: 45px;
+  }
+  .typeBottom .typeBottomBox .position01 {
+    margin-left: 62px;
+  }
+  
+  .typeBottom .typeBottomBox .position02 {
+    margin-left: 54px;
+  }
+  
+  .typeBottom .typeBottomBox .position03 {
+    margin-left: 57px;
+  }
+  
+  .typeBottom .typeBottomBox p {
+    padding: 0 20px;
+  }
+  
+  /* 채용 안내 */
+  .recruitmentSection01 {
+    width: 769px;
+  }
+  .benefit {
+    height: 1020px;
+  }
+
+  .recImg {
+    height: 480px;
+    top: 830px;
+  }
+  .recText {
+    margin-top: 60px;
+  }
+  .recText h3 {
+    font-size: 26px;
+    margin-left: 15px;
+  }
+  .recruitmentTop .recruitmentInner {
+    height: 260px;
+  }
+  .recruitmentTop .recruitmentInner > div {
+    width: 192px;
+    height: 260px;
+  }
+  .recruitmentTop .recruitmentInner > div img {
+    height: 80px;
+  }
+  .recruitmentTop .recruitmentInner > div h4 {
+    font-size: 20px;
+    margin-top: 40px;
+  }
+  .recruitmentTop .recruitmentInner > div:last-of-type h4 {
+    margin-top: 36px;
+    font-size: 24px;
+  }
+  .recruitmentTop .recruitmentInner i {
+    margin-left: 75px;
+    top: 1090px;
+  }
+  .recruitmentBottom {
+    margin-bottom: 50px;
+  }
+  .recruitmentBottom h4 {
+    font-size: 16px;
+    margin: 12px 0;
+    line-height: 35px;
+    text-indent: -11px;
+  }
+
+  /* 복리후생 */
+  .welImg {
+    height: 440px;
+  }
+  .welfareInner h3 {
+    font-size: 30px;
+    margin-top: 80px;
+  }
+  .welfareBox div {
+    width: 180px;
+    height: 340px;
+    margin-top: 45px;
+  }
+  .welfareBox div h4 {
+    margin-bottom: 20px;
+  }
+  .welfareBox div p {
+    font-size: 17px;
+    margin: 10px 0;
+  }
+  .welfareBox div img {
+    height: 75px;
+    margin: 20px 0 30px;
+  }
+  .welfareBox div h5 {
+    margin-top: -5px;
+    font-size: 14px;
+  }
+}
+
+@media (max-width: 768px) {
+  .tab {
+    width: 641px;
+  }
+  .tab ul li {
+    width: 213px;
+  }
+  .tab ul li .tablinks.active::after {
+    width: 213px;
+  }
+
+  .typeSection01 {
+    width: 641px;
+    height: 1750px;
+  }
+  .typeText h2 {
+    padding: 140px 0 70px 0;
+  }
+  .typeTop h2 {
+    font-size: 26px;
+    margin: 50px 0 80px;
+  }
+  .typeBottom {
+    flex-wrap: wrap;
+    justify-content: center;
+  }
+  .typeBottom .typeBottomBox {
+    width: 270px;
+    height: 350px;
+    margin-bottom: 0;
+  }
+  .typeBottom .typeBottomBox h4 {
+    margin-left: 85px;
+  }
+  .typeBottom .typeBottomBox .position01 {
+    margin-left: 102px;
+  }
+  .typeBottom .typeBottomBox .position02 {
+    top: 596px;
+    margin-left: 94px;
+  }
+  .typeBottom .typeBottomBox .position03 {
+    top: 746px;
+    margin-left: 97px;
+  }
+  .typeBottom .typeBottomBox p {
+    padding: 0;
+  }
+  .recruitmentBottom h4 {
+    text-indent: -10px;
+  }
+  
+  /* 채용 안내 */
+  .recruitmentSection01 {
+    width: 641px;
+  }
+  .benefit {
+    height: 1020px;
+  }
+
+  .recImg {
+    height: 440px;
+    top: 830px;
+  }
+  .recText {
+    margin-top: 60px;
+  }
+  .recText h3 {
+    font-size: 22px;
+  }
+  .recText > img {
+    height: 25px;
+  }
+  .recruitmentTop .recruitmentInner > div {
+    width: 160px;
+  }
+  .recruitmentTop .recruitmentInner > div img {
+    height: 70px;
+  }
+  .recruitmentTop .recruitmentInner > div h4 {
+    font-size: 18px;
+  }
+  .recruitmentTop .recruitmentInner > div:last-of-type h4 {
+    font-size: 22px;
+  }
+  .recruitmentTop .recruitmentInner i {
+    margin-left: 60px;
+    top: 1070px;
+  }
+  .recruitmentBottom h4 {
+    font-size: 14px;
+    line-height: 26px;
+  }
+  .recruitmentBottom h4 strong {
+    margin-left: 10px;
+  }
+
+  /* 복리후생 */
+  .welImg {
+    height: 440px;
+  }
+  .welfareInner h3 {
+    font-size: 28px;
+    margin-top: 80px;
+  }
+  .welfareBox div {
+    width: 150px;
+    height: 350px;
+  }
+  .welfareBox div p {
+    font-size: 16px;
+    line-height: 22px;
+  }
+  .welfareBox div img {
+    height: 60px;
+  }
+}
+
+@media (max-width: 640px) {
+  .communityImg {
+    background-image: url(/images/staff_background480.jpg);
+  }
+  .tabWrap {
+    display: none;
+  }
+
+  /* MOBILE DROPDOWN */
+  .dropdownMobile {
+    display: block;
+    width: 100%;
+    position: relative;
+    cursor: pointer;
+  }
+  .dropbtn {
+    width: 100%;
+    height: 70px;
+    margin: 0 auto;
+    text-align: center;
+    background-color: #fff;
+    color: #333333;
+    border-bottom: 1px solid #c1c1c1c1;
+    font-size: 19px;
+    font-weight: 600;
+    cursor: pointer;
+  }
+  .dropbtn i {
+    color: #cd1319;
+    margin-left: 10px;
+  }
+  .dropdownMobile {
+    position: relative;
+    display: inline-block;
+  }
+  .dropdown-content {
+    margin: 0 auto;
+    display: none;
+    width: 100%;
+    position: absolute;
+    box-shadow: 0px 2px 6px 0px rgba(141, 141, 141, 0.2);
+    z-index: 1;
+    text-align: center;
+  }
+  .dropdown-content a {
+    margin: 0 auto;
+    font-size: 17px;
+    color: #4c4c4c;
+    padding: 22px 16px;
+    text-decoration: none;
+    display: block;
+    background-color: #fff;
+  }
+  .dropdown-content a:hover {
+    background-color: #f1f1f1;
+  }
+  .show {
+    display:block;
+  }
+  .tab {
+    width: 581px;
+  }
+  .tab ul li {
+    width: 145px;
+  }
+  .tab ul li .tablinks.active::after {
+    width: 145px;
+  }
+
+  .typeSection01 {
+    width: 581px;
+    height: 1700px;
+  }
+  .typeText h2 {
+    font-size: 24px;
+    padding: 70px 0;
+  }
+  .typeTop h2 {
+    font-size: 24px;
+  }
+  .typeTop h2::before {
+    margin-left: -820px;
+  }
+
+  /* 채용 안내 */
+  .recruitmentSection01 {
+    width: 581px;
+  }
+
+  .recruitmentTop .recruitmentInner > div {
+    width: 145px;
+  }
+  .recruitmentTop .recruitmentInner > div img {
+    height: 60px;
+  }
+  .recruitmentTop .recruitmentInner > div h4 {
+    font-size: 16px;
+  }
+  .recruitmentTop .recruitmentInner > div:last-of-type h4 {
+    font-size: 18px;
+    padding-top: 3px;
+  }
+  .recruitmentTop .recruitmentInner i {
+    margin-left: 57px;
+    width: 30px;
+    height: 30px;
+    font-size: 16px;
+    line-height: 30px;
+}
+  .recruitmentBottom h4 {
+    font-size: 14px;
+    line-height: 26px;
+  }
+
+  /* 복리후생 */
+  .benefit {
+    height: 1350px;
+  }
+  .welImg {
+    height: 250px;
+  }
+  .welfareInner h3 {
+    font-size: 26px;
+    margin: 80px 0;
+  }
+  .welfareBox {
+    flex-wrap: wrap;
+    justify-content: center;
+  }
+  .welfareBox div {
+    width: 230px;
+    margin: 20px;
+  }
+}
+
+@media (max-width: 580px) {
+  .typeSection01 {
+    width: 481px;
+    height: 1700px;
+  }
+  .typeBottom .typeBottomBox {
+    width: 240px;
+  }
+  .typeBottom .typeBottomBox h3 {
+    font-size: 20px;
+  }
+  .typeBottom .typeBottomBox h4 {
+    margin-left: 70px;
+  }
+  .typeBottom .typeBottomBox .position01 {
+    margin-left: 87px;
+  }
+  .typeBottom .typeBottomBox .position02 {
+    top: 596px;
+    margin-left: 79px;
+  }
+  .typeBottom .typeBottomBox .position03 {
+    top: 746px;
+    margin-left: 82px;
+  }
+
+  .recruitmentSection01 {
+    width: 481px;
+  }
+  .recImg {
+    height: 450px;
+  }
+  .recruitmentTop .recruitmentInner {
+    flex-wrap: wrap;
+    height: 290px;
+  }
+  .recruitmentTop .recruitmentInner .last {
+    display: none;
+  }
+  .recruitmentTop .recruitmentInner > div {
+    width: 145px;
+    height: 145px;
+  }
+  .recruitmentTop .recruitmentInner > div:last-of-type {
+    width: 481px;
+  }
+  .recruitmentTop .recruitmentInner > div img {
+    margin-top: 20px;
+  }
+  .recruitmentTop .recruitmentInner > div h4 {
+    margin-top: 20px;
+  }
+  .recruitmentTop .recruitmentInner > div:last-of-type h4 {
+    padding-top: 0px;
+    margin-top: 20px;
+  }
+  .recruitmentTop .recruitmentInner i {
+    margin-left: 67px;
+    top: 1010px;
+  }
+
+  /* 복리후생 */
+  .benefit {
+    height: 1350px;
+  }
+  .welfareInner h3 {
+    font-size: 22px;
+  }
+  .welfareBox div {
+    width: 200px;
+  }
+}
+
+@media (max-width: 480px) {
+  .staffImg {
+    height: 450px;
+  }
+  .staffTop h2 {
+    font-size: 38px;
+  }
+
+  .typeSection01 {
+    width: 376px;
+    height: 2300px;
+  }
+  .typeText h2 {
+    font-size: 20px;
+  }
+  .recImg {
+    top: 730px;
+  }
+  .typeTop > img {
+    width: 130px;
+  }
+  .typeTop h2 {
+    font-size: 22px;
+    margin: 50px 0 40px;
+  }
+  .typeBottom .typeBottomBox {
+    width: 250px;
+  }
+  .typeBottom .typeBottomBox h3 {
+    font-size: 20px;
+  }
+  .typeTop h2::before {
+    display: none;
+  }
+  .typeTop h2::after {
+    display: none;
+  }
+  .typeBottom .typeBottomBox:nth-child(2n) {
+    margin-top: 100px;
+  }
+  .typeBottom .typeBottomBox:nth-child(3) {
+    margin-top: 100px;
+  }
+  .typeBottom .typeBottomBox .position01 {
+    top: 545px;
+  }
+  .typeBottom .typeBottomBox .position02 {
+    top: 995px;
+  }
+  .typeBottom .typeBottomBox .position03 {
+    top: 1443px;
+  }
+
+  .recruitmentSection01 {
+    width: 376px;
+  }
+  .recImg {
+    height: 450px;
+  }
+  .recruitmentTop .recruitmentInner > div {
+    width: 125px;
+  }
+  .recruitmentTop .recruitmentInner > div:last-of-type {
+    width: 376px;
+  }
+  .recruitmentTop .recruitmentInner i {
+    margin-left: 47px;
+    width: 25px;
+    height: 25px;
+    font-size: 14px;
+    line-height: 26px;
+  }
+  .recruitmentBottom {
+    flex-wrap: wrap;
+    margin: 40px 0;
+  }
+  .recText {
+    padding-left: 20px;
+  }
+  .recruitmentLeft {
+    width: 100%;
+  }
+  .recruitmentRight {
+    width: 100%;
+  }
+  .recruitmentBottom h4 {
+    padding-left: 20px;
+    font-size: 18px;
+  }
+
+  /* 복리후생 */
+  .benefit {
+    height: 1220px;
+  }
+  .welImg {
+    top: 740px;
+  }
+  .welfareInner h3 {
+    margin: 120px 0;
+    font-size: 17px;
+    line-height: 40px;
+  }
+  .welfareBox div {
+    width: 168px;
+    margin: 10px;
+    height: 290px;
+  }
+  .welfareBox div img {
+    height: 50px;
+  }
+  .welfareBox div h4 {
+    font-size: 18px;
+    margin-bottom: 10px;
+  }
+  .welfareBox div p {
+    font-size: 15x;
+    line-height: 20px;
+    margin: 5px 0;
+  }
+  .welfareBox div h5 {
+    font-size: 12px;
+  }
+}
+
+@media (max-width: 375px) {
+  .dropbtn {
+    font-size: 16px;
+  }
+  .dropdown-content a {
+    font-size: 14px;
+    padding: 15px 16px;
+  }
+
+  .typeSection01 {
+    width: 301px;
+    height: 2280px;
+  }
+  .typeText {
+    margin-bottom: 0;
+  }
+  .typeTop > img {
+    width: 130px;
+  }
+  .typeTop h2 {
+    font-size: 20px;
+  }
+
+  .recruitmentSection01 {
+    width: 301px;
+  }
+  .recImg {
+    height: 360px;
+  }
+  .recruitmentTop .recruitmentInner {
+    margin-top: 30px;
+    height: 230px;
+  }
+  .recruitmentTop .recruitmentInner > div {
+    width: 100px;
+    height: 115px;
+  }
+  .recruitmentTop .recruitmentInner > div:last-of-type {
+    width: 301px;
+  }
+  .recruitmentTop .recruitmentInner > div img {
+    height: 45px;
+  }
+  .recruitmentTop .recruitmentInner > div:last-of-type h4 {
+    margin-top: 10px;
+  }
+  .recruitmentTop .recruitmentInner i {
+    top: 868px;
+    margin-left: 40px;
+    width: 20px;
+    height: 20px;
+    line-height: 20px;
+  }
+  .recruitmentBottom h4 {
+    font-size: 16px;
+  }
+
+  /* 복리후생 */
+  .benefit {
+    height: 1220px;
+  }
+  .welImg {
+    height: 350px;
+  }
+  .welfareInner h3 {
+    font-size: 24px;
+    line-height: 44px;
+  }
+  .welfareBox div {
+    width: 135px;
+    margin: 5px;
+    height: 270px;
+  }
+  .welfareBox div img {
+    margin-bottom: 20px;
+  }
+  .welfareBox div h4 {
+    font-size: 18px;
+    margin-bottom: 10px;
+  }
+  .welfareBox div p {
+    font-size: 13px;
+    line-height: 18px;
+  }
+}
+
+@media (max-width: 300px) {
+  .typeSection01 {
+    width: 280px;
+    height: 2250px;
+  }
+  .typeTop h2 {
+    font-size: 18px;
+  }
+  .typeBottom .typeBottomBox h3 {
+    font-size: 16px;
+  }
+  .typeBottom .typeBottomBox h4 {
+    top: 90px;
+    margin-left: 75px;
+  }
+  .typeBottom .typeBottomBox .position01 {
+    top: 540px;
+    margin-left: 92px;
+  }
+  .typeBottom .typeBottomBox .position02 {
+    top: 990px;
+    margin-left: 84px;
+  }
+  .typeBottom .typeBottomBox .position03 {
+    top: 1438px;
+    margin-left: 87px;
+  }
+
+  .recruitmentSection01 {
+    width: 280px;
+  }
+  .recruitmentTop .recruitmentInner > div {
+    width: 90px;
+  }
+  .recruitmentTop .recruitmentInner > div:last-of-type {
+    width: 280px;
+  }
+
+  /* 복리후생 */
+  .benefit {
+    height: 1220px;
+  }
+  .welImg {
+    height: 350px;
+  }
+  .welfareInner h3 {
+    font-size: 23px;
+    line-height: 44px;
+  }
+  .welfareBox div {
+    width: 130px;
+  }
+  .welfareBox div h4 {
+    font-size: 14px;
+  }
+  .welfareBox div p {
+    font-size: 12px;
+    line-height: 18px;
+  }
+}

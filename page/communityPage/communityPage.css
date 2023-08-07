@@ -1,0 +1,1008 @@
+/* http://meyerweb.com/eric/tools/css/reset/ 
+  v2.0 | 20110126
+  License: none (public domain)
+*/
+
+html,
+body,
+div,
+span,
+applet,
+object,
+iframe,
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+p,
+blockquote,
+pre,
+a,
+abbr,
+acronym,
+address,
+big,
+cite,
+code,
+del,
+dfn,
+em,
+img,
+ins,
+kbd,
+q,
+s,
+samp,
+small,
+strike,
+strong,
+sub,
+sup,
+tt,
+var,
+b,
+u,
+i,
+center,
+dl,
+dt,
+dd,
+ol,
+ul,
+li,
+fieldset,
+form,
+label,
+legend,
+table,
+caption,
+tbody,
+tfoot,
+thead,
+tr,
+th,
+td,
+article,
+aside,
+canvas,
+details,
+embed,
+figure,
+figcaption,
+footer,
+header,
+hgroup,
+menu,
+nav,
+output,
+ruby,
+section,
+summary,
+time,
+mark,
+audio,
+video,
+button {
+  margin: 0;
+  padding: 0;
+  border: 0;
+  font-size: 100%;
+  font: inherit;
+  vertical-align: baseline;
+  text-decoration: none;
+  font-family: "Noto Sans KR", sans-serif;
+}
+/* HTML5 display-role reset for older browsers */
+article,
+aside,
+details,
+figcaption,
+figure,
+footer,
+header,
+hgroup,
+menu,
+nav,
+section {
+  display: block;
+}
+body {
+  line-height: 1;
+}
+ol,
+ul,
+li {
+  list-style: none;
+}
+blockquote,
+q {
+  quotes: none;
+}
+blockquote:before,
+blockquote:after,
+q:before,
+q:after {
+  content: "";
+  content: none;
+}
+table {
+  border-collapse: collapse;
+  border-spacing: 0;
+}
+form,
+input {
+  border: none;
+}
+
+/* companyPage css */
+#community {
+  position: relative;
+  width: 100%;
+  color: #333333;
+}
+
+.communityImg {
+  background-image: url(/images//community_background.jpg);
+  width: 100%;
+  height: 550px;
+  position: relative;
+  background-repeat: no-repeat;
+  background-size: 100% 550px;
+  background-position: center;
+  animation: grow 1s linear 1;
+}
+
+@keyframes grow {
+  0% {
+    background-size: 103% 550px;
+  }
+  100% {
+    background-size: 100% 550px;
+  }
+}
+
+.communityTop {
+  position: relative;
+}
+
+.communityTop h2 {
+  width: 100%;
+  position: absolute;
+  top: 50%;
+  transform: translate(0, -50%);
+  text-align: center;
+  font-size: 48px;
+  font-weight: 600;
+  color: #fff;
+}
+
+.tabWrap {
+  position: absolute;
+  width: 100%;
+  height: 70px;
+  left: 0;
+  border-bottom: 1px solid #c1c1c1c1;
+}
+
+.tab {
+  width: 1200px;
+  height: 70px;
+  margin: 0 auto;
+}
+
+.tab ul {
+  display: flex;
+  justify-content: space-between;
+}
+
+.tab ul li {
+  width: 300px;
+  font-size: 19px;
+  font-weight: 600;
+  margin-top: 25px;
+  cursor: pointer;
+  text-align: center;
+}
+
+.tab ul li a {
+  height: 45px;
+  display: block;
+}
+
+.tab ul li .tablinks.active::after {
+  content: "";
+  display: block;
+  width: 300px;
+  border-bottom: 3px solid #cd1319;
+  padding-bottom: 25px;
+}
+
+.dropdownMobile {
+  display: none;
+}
+
+/* tab 컨텐츠 */
+.tabcontent {
+  display: none;
+  animation: fadeEffect 1s;
+}
+
+@keyframes fadeEffect {
+  from {
+    opacity: 0;
+  }
+  to {
+    opacity: 1;
+  }
+}
+
+/* 제품소개 */
+.introduceSection01 {
+  width: 1200px;
+  margin: 0 auto;
+  text-align: center;
+}
+
+.introduceText {
+  margin-bottom: 50px;
+}
+
+.introduceText h2 {
+  padding: 150px 0 80px 0;
+  font-size: 28px;
+  font-weight: 600;
+}
+
+.introduceText h2 span {
+  color: #cd1319;
+  font-size: 48px;
+}
+
+.introduceSearch {
+  margin-bottom: 70px;
+}
+
+.introduceSearch .search {
+  border-bottom: 1px solid #c1c1c1;
+  font-size: 16px;
+  width: 400px;
+  padding: 0 0 10px 10px;
+}
+
+.introduceSearch .search::placeholder {
+  color: #c1c1c1;
+}
+
+.introduceSearch .search:focus {
+  border: none;
+  outline: none;
+  border-bottom: 1px solid #c1c1c1;
+}
+
+.introduceSearch i {
+  position: absolute;
+  justify-content: right;
+  color: #cd1319;
+  font-size: 22px;
+  margin-left: -40px;
+  top: 878px;
+  cursor: pointer;
+}
+
+.introduceList .introduceListTop {
+  position: relative;
+  display: flex;
+  justify-content: space-between;
+  padding-bottom: 10px;
+  border-bottom: 3px solid #cd1319;
+  margin-bottom: 23px;
+}
+
+.write {
+  color: #fff;
+  background-color: #cd1319;
+  padding: 8px 16px;
+  border-radius: 5px;
+  font-size: 18px;
+  position: absolute;
+  margin: 0px 0 0 316px;
+  /*opacity: 0;*/
+  display: none;
+}
+
+.introduceList .introduceListTop p {
+  font-size: 16px;
+  padding-top: 10px;
+}
+
+.introduceList .introduceListTop p span {
+  color: #cd1319;
+}
+
+.introduceList .introduceListTop select {
+  width: 200px;
+  border: 1px solid #c1c1c1;
+  box-sizing: border-box;
+  padding: 7px 13px;
+  font-style: normal;
+  font-weight: 400;
+  font-size: 14px;
+  line-height: 16px;
+}
+
+.introduceList .introduceListTop select option {
+  color: #c1c1c1;
+  padding: 5px 0;
+  font-size: 14px;
+}
+
+.introduceListBottom .listBottomBox {
+  display: flex;
+  margin-bottom: 23px;
+  border-bottom: 1px solid #c1c1c1;
+  padding-bottom: 30px;
+  position: relative;
+}
+
+.introduceListBottom .listBottomBox img {
+  cursor: pointer;
+  width: 200px;
+  height: 200px;
+  left: 0;
+  object-fit: cover;
+  position: absolute;
+  -webkit-transform: translate(50,50);
+  transform: translate(50,50);
+}
+
+.introduceListBottom .listBottomBox .listText {
+  text-align: left;
+  margin-left: 215px;
+}
+
+.introduceListBottom .listBottomBox .listText h4 {
+  font-size: 22px;
+  color: #333333;
+  margin-top: 3px;
+  width: 985px;
+  height: 26px;
+  overflow:hidden;
+  text-overflow:ellipsis;
+  white-space:nowrap;
+}
+
+.introduceListBottom .listBottomBox .listText .listTextBottom {
+  display: flex;
+  justify-content: space-around;
+}
+
+.introduceListBottom .listBottomBox .listText > p {
+  font-size: 16px;
+  line-height: 27px;
+  color: #939393;
+  padding-bottom: 20px;
+  height: 90px;
+  overflow: hidden;
+  margin: 20px 0;
+  width: 985px;
+  overflow-wrap: break-word;
+}
+
+.introduceListBottom .listBottomBox:hover p {
+  text-decoration: underline;
+  color: #333333;
+}
+
+.introduceListBottom .listBottomBox .listText .listTextBottom div {
+  font-size: 16px;
+  color: #333333;
+}
+
+.viewCount {
+  padding: 0;
+}
+
+.introduceListBottom .listBottomBox .listText span {
+  font-size: 16px;
+  color: #939393;
+}
+
+.listNumber {
+  position: relative;
+  display: flex;
+  justify-content: center;
+  margin: 50px 0 120px 0;
+}
+
+.listNumber i {
+  color: #333333;
+}
+
+.listNumber p,
+i {
+  font-size: 18px;
+  padding: 0 10px;
+  color: #333333;
+  cursor: pointer;
+}
+
+.listNumber .introducePage {
+  color: #333333;
+  font-weight: 500;
+}
+
+/* 공식 sns */
+
+.snsBottom {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: left;
+  text-align: left;
+}
+
+.snsBottom .imgHover {
+  position: relative;
+  overflow: hidden;
+  width: 380px;
+  height: 380px;
+}
+
+.snsBottom .imgHover img {
+  width: 100%;
+  height: 100%;
+  position: absolute;
+  object-fit: cover;
+  -webkit-transform: translate(50,50);
+  transform: translate(50,50);
+}
+
+.snsBottom > div:hover img {
+  transform: scale(1.1);
+  transition: all 0.5s;
+}
+
+.snsBottom > div {
+  border: 0.5px solid #c1c1c1;
+  margin: 0 9px 50px;
+}
+
+.snsBottom div:hover h3 {
+  color: #cd1319;
+}
+
+.snsBottom div h3 {
+  width: 340px;
+  overflow:hidden;
+  text-overflow:ellipsis;
+  white-space:nowrap;
+  font-size: 22px;
+  padding: 30px 20px;
+  color: #333333;
+}
+
+.snsBottom div .listTextBottom {
+  display: flex;
+  justify-content: space-between;
+  font-size: 18px;
+  color: #939393;
+  margin: 20px;
+}
+
+/*미디어쿼리*/
+@media (max-width: 1290px) {
+  .tab {
+    width: 1025px;
+  }
+  .tab ul li {
+    width: 256px;
+  }
+  .tab ul li .tablinks.active::after {
+    width: 256px;
+  }
+
+  .introduceSection01 {
+    width: 1025px;
+  }
+  .introduceListBottom .listBottomBox .listText h4 {
+    width: 810px;
+  }
+  .introduceListBottom .listBottomBox .listText > p {
+    width: 810px;
+  }
+
+  .write {
+    margin: 0px 0 0 225px;
+  }
+
+  .snsBottom .imgHover {
+    width: 320px;
+    height: 320px;
+  }
+  .snsBottom .imgHover img {
+    width: 100%;
+  }
+  .snsBottom div h3 {
+    width: 280px;
+  }
+}
+
+@media (max-width: 1024px) {
+  .tab {
+    width: 961px;
+  }
+  .tab ul li {
+    width: 240px;
+  }
+  .tab ul li .tablinks.active::after {
+    width: 240px;
+  }
+
+  .introduceSection01 {
+    width: 961px;
+  }
+  .introduceListBottom .listBottomBox .listText h4 {
+    width: 746px;
+    overflow:hidden;
+    text-overflow:ellipsis;
+    white-space:nowrap;
+  }
+  .introduceListBottom .listBottomBox .listText > p {
+    width: 746px;
+  }
+  .write {
+    margin: 0px 0 0 185px;
+  }
+
+  .snsBottom .imgHover {
+    width: 300px;
+    height: 300px;
+  }
+  .snsBottom div h3 {
+    width: 260px;
+  }
+}
+
+@media (max-width: 960px) {
+  .tab {
+    width: 769px;
+  }
+  .tab ul li {
+    width: 192px;
+  }
+  .tab ul li .tablinks.active::after {
+    width: 192px;
+  }
+
+  .introduceSection01 {
+    width: 769px;
+  }
+  .introduceListBottom .listBottomBox .listText h4 {
+    width: 554px;
+  }
+  .introduceListBottom .listBottomBox .listText > p {
+    width: 554px;
+  }
+
+  .write {
+    margin: -5px 0 0 95px;
+  }
+
+  .snsBottom .imgHover {
+    width: 250px;
+    height: 250px;
+  }
+  .snsBottom > div {
+    margin: 0 2px 20px;
+  }
+  .snsBottom div h3 {
+    width: 200px;
+    font-size: 20px;
+    margin: 20px 0 20px 10px;
+    padding: 30px 0;
+  }
+  .snsBottom div p {
+    font-size: 16px;
+    margin: 0 0 30px 10px;
+  }
+}
+
+@media (max-width: 768px) {
+  .tab {
+    width: 641px;
+  }
+  .tab ul li {
+    width: 160px;
+  }
+  .tab ul li .tablinks.active::after {
+    width: 160px;
+  }
+
+  .introduceSection01 {
+    width: 641px;
+  }
+  .write {
+    margin: -162px 0 0 32px;
+  }
+  .introduceListBottom .listBottomBox img {
+    width: 170px;
+    height: 170px;
+  }
+  .introduceListBottom .listBottomBox .listText {
+    margin-left: 200px;
+  }
+  .introduceListBottom .listBottomBox .listText h4 {
+    font-size: 18px;
+    margin-top: 0;
+    width: 441px;
+  }
+  .introduceListBottom .listBottomBox .listText > p {
+    width: 441px;
+  }
+  .introduceListBottom .listBottomBox .listText p {
+    font-size: 14px;
+    line-height: 22px;
+    height: 70px;
+    margin: 22px 0;
+  }
+
+  .snsBottom .imgHover {
+    width: 300px;
+    height: 300px;
+  }
+  .snsBottom > div {
+    margin: 0 9px 20px;
+  }
+  .snsBottom div h3 {
+    width: 260px;
+    margin: 20px 0 20px 20px;
+  }
+}
+
+@media (max-width: 640px) {
+  .communityImg {
+    background-image: url(/images/community_background480.jpg);
+  }
+  .tabWrap {
+    display: none;
+  }
+
+  /* MOBILE DROPDOWN */
+  .dropdownMobile {
+    display: block;
+    width: 100%;
+    position: relative;
+    cursor: pointer;
+  }
+  .dropbtn {
+    width: 100%;
+    height: 70px;
+    margin: 0 auto;
+    text-align: center;
+    background-color: #fff;
+    color: #333333;
+    border-bottom: 1px solid #c1c1c1c1;
+    font-size: 19px;
+    font-weight: 600;
+    cursor: pointer;
+  }
+  .dropbtn i {
+    color: #cd1319;
+    padding-right: 0;
+  }
+  .dropdownMobile {
+    position: relative;
+    display: inline-block;
+  }
+  .dropdown-content {
+    margin: 0 auto;
+    display: none;
+    width: 100%;
+    position: absolute;
+    box-shadow: 0px 2px 6px 0px rgba(141, 141, 141, 0.2);
+    z-index: 1;
+    text-align: center;
+  }
+  .dropdown-content a {
+    margin: 0 auto;
+    font-size: 17px;
+    color: #4c4c4c;
+    padding: 22px 16px;
+    text-decoration: none;
+    display: block;
+    background-color: #fff;
+  }
+  .dropdown-content a:hover {
+    background-color: #f1f1f1;
+  }
+  .show {
+    display:block;
+  }
+  .tab {
+    width: 581px;
+  }
+  .tab ul li {
+    width: 145px;
+  }
+  .tab ul li .tablinks.active::after {
+    width: 145px;
+  }
+
+  .write {
+    margin: -152px 0 0 2px;
+  }
+
+  .introduceText h2 {
+    padding: 70px 0;
+    font-size: 24px;
+  }
+
+  .introduceSection01 {
+    width: 581px;
+  }
+  .introduceListBottom .listBottomBox img {
+    width: 150px;
+    height: 150px;
+  }
+  .introduceListBottom .listBottomBox .listText {
+    margin-left: 170px;
+  }
+  .introduceListBottom .listBottomBox .listText h4 {
+    font-size: 17px;
+    margin-top: 8px;
+    width: 411px;
+  }
+  .introduceListBottom .listBottomBox .listText p {
+    font-size: 14px;
+    line-height: 22px;
+    height: 50px;
+    margin: 15px 0;
+    width: 411px;
+  }
+  .introduceSearch i {
+    margin-left: -35px;
+    top: 860px;
+  }
+
+  .snsBottom .imgHover {
+    width: 280px;
+    height: 280px;
+  }
+  .snsBottom > div {
+    margin: 0 4px 20px;
+  }
+  .snsBottom div h3 {
+    width: 240px;
+    font-size: 18px;
+  }
+}
+
+@media (max-width: 580px) {
+  .introduceSection01 {
+    width: 481px;
+  }
+  .write {
+    margin: -150px 0 0 -50px;
+  }
+  .introduceListBottom .listBottomBox .listText {
+    margin-left: 165px;
+  }
+  .introduceListBottom .listBottomBox .listText h4 {
+    margin-top: 0px;
+    width: 316px;
+  }
+  .introduceListBottom .listBottomBox .listText p {
+    font-size: 15px;
+    width: 316px;
+  }
+  .introduceListBottom .listBottomBox .listText span {
+    font-size: 14px;
+  }
+  .introduceListBottom .listBottomBox .listText .listTextBottom div {
+    font-size: 14px;
+}
+
+  .snsBottom .imgHover {
+    width: 230px;
+    height: 230px;
+  }
+  .snsBottom div h3 {
+    width: 190px;
+  }
+}
+
+@media (max-width: 480px) {
+  .communityImg {
+    height: 450px;
+  }
+  .communityTop h2 {
+    font-size: 38px;
+  }
+
+  .write {
+    margin: -130px 0 0 -63px;
+  }
+
+  .introduceText h2 {
+    padding: 50px 0;
+    font-size: 20px;
+  }
+  .introduceSection01 {
+    width: 376px;
+  }
+  .introduceSearch .search {
+    font-size: 14px;
+    width: 320px;
+  }
+  .introduceSearch i {
+    margin-left: -35px;
+    top: 720px;
+    font-size: 20px;
+  }
+  .resultList .resultListTop {
+    margin-bottom: 30px;
+  }
+  .resultList .resultListTop p {
+    font-size: 16px;
+    padding-top: 10px;
+  }
+  .resultList .resultListTop p em {
+    display: none;
+  }
+  .resultList .resultListTop select {
+    width: 150px;
+    font-size: 12px;
+  }
+  .introduceListBottom .listBottomBox .listText h4 {
+    width: 211px;
+  }
+  .introduceListBottom .listBottomBox .listText > p {
+    width: 211px;
+  }
+  .introduceListBottom .listBottomBox .listText .listTextBottom div {
+    margin-top: -3px;
+}
+  .resultList .listNumber {
+    margin: 50px 0 70px 0;
+  }
+  .resultList .listNumber a p {
+    font-size: 16px;
+  }
+  .resultList .listNumber a i {
+    font-size: 16px;
+  }
+
+  .snsBottom .imgHover {
+    width: 180px;
+    height: 180px;
+  }
+  .snsBottom > div {
+    margin: 0 2px 20px;
+  }
+  .snsBottom div h3 {
+    width: 140px;
+    font-size: 16px;
+    padding: 0;
+  }
+  .snsBottom div .listTextBottom {
+    font-size: 14px;
+    margin: 20px;
+  }
+  .snsBottom div .listTextBottom div {
+    margin-top: -3px;
+  }
+}
+
+@media (max-width: 375px) {
+  .dropbtn {
+    font-size: 16px;
+  }
+  .dropdown-content a {
+    font-size: 14px;
+    padding: 15px 16px;
+  }
+  .write {
+    margin: 48px 0 0 -60px;
+    font-size: 14px;
+  }
+  .introduceSection01 {
+    width: 301px;
+  }
+  .introduceSearch .search {
+    font-size: 14px;
+    width: 260px;
+  }
+  .introduceSearch i {
+    font-size: 16px;
+  }
+  .resultList .resultListTop {
+    margin-bottom: 20px;
+  }
+  .resultList .resultListTop p {
+    font-size: 14px;
+  }
+  .resultList .resultListTop select {
+    width: 120px;
+    padding: 5px 10px;
+  }
+  .introduceListBottom .listBottomBox img {
+    width: 130px;
+    height: 130px;
+  }
+  .introduceListBottom .listBottomBox .listText {
+    margin-left: 140px;
+  }
+  .introduceListBottom .listBottomBox .listText h4 {
+    font-size: 16px;
+    line-height: 20px;
+    width: 161px;
+  }
+  .introduceListBottom .listBottomBox .listText p {
+    font-size: 14px;
+    margin: 20px 0;
+    line-height: 19px;
+    height: 34px;
+    width: 161px;
+  }
+  .introduceListBottom .listBottomBox .listText .listTextBottom {
+    margin-top: 10px;
+}
+
+  .snsBottom .imgHover {
+    width: 145px;
+    height: 145px;
+  }
+  .snsBottom > div {
+    width: 145px;
+    margin: 0 1px 20px;
+  }
+  .snsBottom div h3 {
+    font-size: 14px;
+    width: 105px;
+    margin: 20px 10px;
+  }
+  .snsBottom div .listTextBottom {
+    font-size: 12px;
+    margin: 10px;
+  }
+  .snsBottom div .listTextBottom div {
+    margin-top: 0px;
+  }
+  .snsBottom div .listTextBottom div i {
+    font-size: 12px;
+  }
+}
+
+@media (max-width: 300px) {
+  .introduceSection01 {
+    width: 280px;
+  }
+  .introduceSearch .search {
+    width: 240px;
+  }
+  .introduceSearch i {
+    margin-left: -30px;
+  }
+  .introduceListBottom .listBottomBox .listText h4 {
+    width: 140px;
+}
+.introduceListBottom .listBottomBox .listText > p {
+  width: 140px;
+}
+
+  .snsBottom .imgHover {
+    width: 120px;
+    height: 120px;
+  }
+  .snsBottom > div {
+    width: 120px;
+    margin: 0 8px 10px;
+  }
+  .snsBottom div h3 {
+    margin: 20px 0 20px 5px;
+  }
+  .snsBottom div p {
+    margin: 0 0 20px 5px;
+  }
+}

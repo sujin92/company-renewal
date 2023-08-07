@@ -1,0 +1,313 @@
+<!DOCTYPE html>
+<html lang="ko">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+
+
+    <link rel="stylesheet" href="/index.css" />
+    <link rel="stylesheet" href="staffPage.css" />
+    <link
+      rel="shortcut icon"
+      type="image/png"
+      href="/favicon/apple-icon-180x180.png"
+    />
+    <!-- lodash -->
+    <script
+      src="https://cdnjs.cloudflare.com/ajax/libs/lodash.js/4.17.21/lodash.min.js"
+      integrity="sha512-WFN04846sdKMIP5LKNphMaWzU7YpMyCU245etK3g/2ARYbPK9Ub18eG+ljU96qKRCWh+quCY7yefSmlkQw1ANQ=="
+      crossorigin="anonymous"
+      referrerpolicy="no-referrer"
+    ></script>
+    <!-- 폰트 -->
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Noto+Sans+KR:wght@100;300;400;500;700;900&family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500&display=swap"
+      rel="stylesheet"
+    />
+    <!--animate style-->
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css"
+    />
+    <!-- 폰트어썸 -->
+    <script
+      src="https://kit.fontawesome.com/cad96521f3.js"
+      crossorigin="anonymous"
+    ></script>
+
+    <script>
+      document.addEventListener('DOMContentLoaded', function() {
+      sessionStorage.setItem("password", null);
+      let current_tab = window.location.href.split("?")[1].split('id=')[1];
+      
+      const addIconToDropbtn = () => {
+        const icon = document.createElement('i');
+        icon.classList.add('fa', 'fa-caret-down');
+        document.querySelector('.dropbtn').appendChild(icon);
+      };
+      
+      if (current_tab === 'type') {
+        document.querySelector('.dropbtn').textContent = '인재상';
+        addIconToDropbtn();
+      }
+      else if (current_tab === 'recruitment') {
+        document.querySelector('.dropbtn').textContent = '채용안내';
+        addIconToDropbtn();
+      }
+      else if (current_tab === 'welfare') {
+        document.querySelector('.dropbtn').textContent = '복리후생';
+        addIconToDropbtn();
+      }
+    });
+    </script>
+
+    <script src="/js/jquery-1.10.2.min.js"></script>
+    <script src="/js/main.js"></script>
+    <script src="/js/tab.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/waypoints/4.0.1/jquery.waypoints.min.js"></script>
+
+    <title>WIMIR</title>
+  </head>
+  <body>
+    <!-- header -->
+    <div id="header"></div>
+    <!-- 퀵메뉴 -->
+    <div class="quickmenu" id="quickmenu"></div>
+
+    <section id="staff">
+      <div class="staffTop">
+        <li
+          class="staffImg"
+        ></li>
+        <h2 class="animate__animated animate__fadeInUp">인재채용</h2>
+      </div>
+
+      <div class="wrap">
+        <div class="tabWrap">
+          <div class="tab">
+            <ul>
+              <li class="stafftab">
+                <a
+                  class="tablinks type"
+                  onclick="opentab(event, 'type')"
+                  id="defaultOpen"
+                >
+                  인재상
+                </a>
+              </li>
+              <li>
+                <a
+                  class="tablinks recruitment"
+                  onclick="opentab(event, 'recruitment')"
+                >
+                  채용안내
+                </a>
+              </li>
+              <li>
+                <a class="tablinks welfare" onclick="opentab(event, 'welfare')">
+                  복리후생
+                </a>
+              </li>
+            </ul>
+          </div>
+        </div>
+
+        <div class="dropdownMobile">
+          <button onclick="myFunction()" class="dropbtn">인재채용<i class="fa fa-caret-down"></i></button>
+          <div id="menuDropdown" class="dropdown-content">
+            <a href="/page/staffPage/staffPage.html?id=type">인재상</a>
+            <a href="/page/staffPage/staffPage.html?id=recruitment">채용안내</a>
+            <a href="/page/staffPage/staffPage.html?id=welfare">복리후생</a>
+          </div>
+        </div>
+
+        <div id="type" class="tabcontent">
+          <div class="typeSection01">
+            <div class="typeText">
+              <h2>인재상<span>.</span></h2>
+            </div>
+            <div class="typeTop">
+              <img src="/images/logo_big.png" alt="로고" />
+              <h2>
+                위미르(주)와 함께<br /><span>미래를 만들어가는 원동력</span>이
+                될 인재
+              </h2>
+            </div>
+            <div class="typeBottom">
+              <div class="typeBottomBox">
+                <h3>경영기획팀</h3>
+                <img src="/icon/staff01.png" alt="아이콘" />
+                <h4>Management<br />Planning</h4>
+                <p>
+                  <span>R&D</span>와 적성이 맞는 분<br />
+                  <span>데이터 플랫폼</span>에 관심이 있으신 분<br />
+                  <span>끈기와 배우려는 의지</span>가 확고하신 분
+                </p>
+              </div>
+              <div class="typeBottomBox">
+                <h3>기업부설연구소</h3>
+                <img src="/icon/staff02.png" alt="아이콘" />
+                <h4 class="position01">Research<br />Institute</h4>
+                <p>
+                  자기 일에 소신 있고 <span>타인을 존중</span>하는 분<br />
+                  <span>끈기 있게 추진</span>하고 <span>목표를 개척</span>하는
+                  분<br />
+                  활발하게 <span>소통하고 협업</span>을 중요시하는 분
+                </p>
+              </div>
+              <div class="typeBottomBox">
+                <h3>홍보파트</h3>
+                <img src="/icon/staff01.png" alt="아이콘" />
+                <h4 class="position02">Promotion<br />Part</h4>
+                <p>
+                  평소 <span>SNS를 관리</span>하거나 관심이 많으신 분<br />
+                  <span>창의력</span>이 돋보이고 <span>트렌드에 민감</span>하신
+                  분<br />
+                  <span>활발하고 소통</span>을 중요시하는 분
+                </p>
+              </div>
+              <div class="typeBottomBox">
+                <h3>기술영업파트</h3>
+                <img src="/icon/staff02.png" alt="아이콘" />
+                <h4 class="position03">Technical<br />Sales Part</h4>
+                <p>
+                  <span>문제 해결 중심 사고</span>를 가지신 분<br />
+                  <span>적극적이고 활발한 성격</span>을 가지신 분
+                </p>
+              </div>
+              <span class="diagonal01 diagona"></span>
+              <span class="diagonal02 diagona"></span>
+              <span class="diagonal03 diagona"></span>
+            </div>
+          </div>
+        </div>
+
+        <div id="recruitment" class="tabcontent">
+          <div class="recruitmentSection01">
+            <div class="typeText">
+              <h2>채용안내<span>.</span></h2>
+            </div>
+            <div class="recruitmentTop">
+              <div class="recImg"></div>
+              <div class="recText">
+                <img src="/icon/recruitment01.png" alt="아이콘" />
+                <h3>채용절차</h3>
+              </div>
+              <div class="recruitmentInner">
+                <div>
+                  <img src="/icon/recruitment02.png" alt="아이콘" />
+                  <h4>지원서 접수</h4>
+                  <i class="fa-solid fa-chevron-right"></i>
+                </div>
+                <div>
+                  <img src="/icon/recruitment03.png" alt="아이콘" />
+                  <h4>서류 전형</h4>
+                  <i class="fa-solid fa-chevron-right"></i>
+                </div>
+                <div>
+                  <img src="/icon/recruitment04.png" alt="아이콘" />
+                  <h4>면접 전형</h4>
+                  <i class="fa-solid fa-chevron-right last"></i>
+                </div>
+                <div class="acceptance">
+                  <img src="/icon/recruitment05.png" alt="아이콘" />
+                  <h4>최종 합격</h4>
+                </div>
+              </div>
+            </div>
+
+            <div class="recruitmentBottom">
+              <div class="recruitmentLeft">
+                <div class="recText recText02">
+                  <img src="/icon/recruitment01.png" alt="아이콘" />
+                  <h3>접수방법</h3>
+                </div>
+                <h4><p><span>·</span>채용 공고</p><em>취업 포털 사람인</em></h4>
+                <h4>
+                  <p><span>·</span>접수 기간</p><em
+                    >기업부설연구소 개발자 상시 모집</em
+                  >
+                </h4>
+                <h4><p><span>·</span>채용 문의</p><em>wimiryj79@naver.com</em></h4>
+              </div>
+              <div class="recruitmentRight">
+                <div class="recText recText03">
+                  <img src="/icon/recruitment01.png" alt="아이콘" />
+                  <h3>참고사항</h3>
+                </div>
+                <h4>
+                  <span>·</span>서류 전형 합격자에 한 해 개별 통보 후 면접 전형
+                  진행
+                </h4>
+                <h4>
+                  <span>·</span>입사 지원 서류에 허위 사실이 발견될 경우 입사
+                  후에도
+                  채용이 취소될 수 있음
+                </h4>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <div id="welfare" class="tabcontent">
+          <div class="recruitmentSection01 benefit">
+            <div class="typeText">
+              <h2>복리후생<span>.</span></h2>
+            </div>
+            <div class="welfareInner">
+              <div class="welImg"></div>
+              <h3>
+                모든 임직원의 삶의 질 향상과 여유 있는 생활을 위해<br />
+                다양한 복리후생 제도를 진행하고 있습니다.
+              </h3>
+              <div class="welfareBox">
+                <div>
+                  <img src="/icon/welfare01.png" alt="아이콘" />
+                  <h4>급여제도<span></span></h4>
+                  <p>퇴직금</p>
+                  <p>4대 보험</p>
+                  <h5>(수습 기간 3개월에도 지원)</h5>
+                </div>
+                <div>
+                  <img src="/icon/welfare02.png" alt="아이콘" />
+                  <h4>근무</h4>
+                  <p>주 5일 근무</p>
+                  <p>식대 지원</p>
+                  <p>사무용품 지급</p>
+                  <p>휴게실 및 안마의자</p>
+                  <p>간식 및 음료 제공</p>
+                </div>
+                <div>
+                  <img src="/icon/welfare03.png" alt="아이콘" />
+                  <h4>경조사 지원</h4>
+                  <p>경조휴가 및 경조금 지급</p>
+                  <p>배우자 출산휴가</p>
+                  <h5>(유급 휴가 및 출산장려금 지급)</h5>
+                  <p>여성 사원 출산휴가</p>
+                  <h5>(출산장려금 지급)</h5>
+                </div>
+                <div>
+                  <img src="/icon/welfare04.png" alt="아이콘" />
+                  <h4>그 외</h4>
+                  <p>정기 건강검진 실시</p>
+                  <p>주차장 제공</p>
+                  <p>생일 축하금 지급</p>
+                  <p>명절 선물 지급</p>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- footer -->
+    <div id="footer"></div>
+
+    <script src="/js/common.js"></script>
+  </body>
+</html>

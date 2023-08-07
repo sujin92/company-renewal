@@ -1,0 +1,415 @@
+/* http://meyerweb.com/eric/tools/css/reset/ 
+  v2.0 | 20110126
+  License: none (public domain)
+*/
+
+html,
+body,
+div,
+span,
+applet,
+object,
+iframe,
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+p,
+blockquote,
+pre,
+a,
+abbr,
+acronym,
+address,
+big,
+cite,
+code,
+del,
+dfn,
+img,
+ins,
+kbd,
+q,
+samp,
+small,
+strike,
+sub,
+sup,
+tt,
+var,
+b,
+i,
+center,
+dl,
+dt,
+dd,
+ol,
+ul,
+li,
+fieldset,
+form,
+label,
+legend,
+table,
+caption,
+tbody,
+tfoot,
+thead,
+tr,
+th,
+td,
+article,
+aside,
+canvas,
+details,
+embed,
+figure,
+figcaption,
+footer,
+header,
+hgroup,
+menu,
+nav,
+output,
+ruby,
+section,
+summary,
+time,
+mark,
+audio,
+video,
+button {
+  margin: 0;
+  padding: 0;
+  border: 0;
+  font-size: 100%;
+  font: inherit;
+  vertical-align: baseline;
+  text-decoration: none;
+  border: none;
+  font-family: "Noto Sans KR", sans-serif;
+}
+/* HTML5 display-role reset for older browsers */
+article,
+aside,
+details,
+figcaption,
+figure,
+footer,
+header,
+hgroup,
+menu,
+nav,
+section {
+  display: block;
+}
+body {
+  line-height: 1;
+}
+ol,
+ul,
+li {
+  list-style: none;
+}
+blockquote,
+q {
+  quotes: none;
+}
+blockquote:before,
+blockquote:after,
+q:before,
+q:after {
+  content: "";
+  content: none;
+}
+table {
+  border-collapse: collapse;
+  border-spacing: 0;
+}
+
+#loadPage {
+  width: 1200px;
+  margin: 150px auto;
+  text-align: center;
+  height: auto;
+  color: #333333;
+  font-family: "Noto Sans KR", sans-serif;
+}
+
+#loadPage h2 {
+  font-size: 23px;
+  line-height: 30px;
+  padding-bottom: 20px;
+  border-bottom: 2px solid #cd1319;
+}
+
+#loadPage div .loadPageTop {
+  display: flex;
+  justify-content: space-around;
+  background-color: #f0f0f0;
+  align-items: center;
+  height: 50px;
+  border-bottom: 1px solid #c1c1c1;
+}
+
+#loadPage > div > div h3 span {
+  margin-left: 15px;
+  color: #696969;
+}
+
+.revise {
+  text-align: right;
+}
+
+.revise button {
+  padding: 8px 15px;
+  border: 1px solid #c1c1c1;
+  border-radius: 5px;
+  margin: 100px 0 50px 20px;
+  display: inline-block;
+}
+
+.comment > div:nth-of-type(1) {
+  display: flex;
+  padding-bottom: 20px;
+  border-bottom: 1px solid #c1c1c1;
+}
+
+.comment > div:nth-of-type(1) p span {
+  color: #cd1319;
+  margin-left: 7px;
+}
+
+.comment, .commentNew{
+  text-align: left;
+}
+
+.commentUser {
+  border-bottom: 1px solid #c1c1c1;
+  padding-bottom: 15px;
+}
+
+.commentUser p {
+  font-size: 18px;
+  margin: 14px 0;
+}
+
+.commentUser p i {
+  font-size: 20px;
+  margin-right: 5px;
+}
+
+.commentUser p:nth-of-type(3) {
+  font-size: 14px;
+  color: #adadad;
+  margin-bottom: 20px;
+}
+
+.replyHidden {
+  display: none;
+  box-sizing: border-box;
+}
+
+input {
+  width: 30%;
+  height: 32px;
+  font-size: 15px;
+  border: 1px solid #c1c1c1;
+  border-radius: 15px;
+  outline: none;
+  padding-left: 10px;
+  background-color: none;
+  margin: 20px 10px 10px 0;
+}
+
+button {
+  cursor: pointer;
+}
+
+.boxButton {
+  text-align: center;
+  font-size: 13px;
+  padding: 5px 9px;
+  border: 1px solid #c1c1c1;
+  border-radius: 5px;
+  margin-right: 5px;
+  cursor: pointer;
+}
+
+textarea {
+  width: 100%;
+  resize: none;
+  font-size: 15px;
+  border: 1px solid #c1c1c1;
+  border-radius: 12px;
+  outline: none;
+  padding-left: 10px;
+  padding: 10px;
+  box-sizing: border-box;
+}
+
+.btnBox {
+  font-size: 14px;
+  margin: 30px 0;
+  padding: 8px 18px;
+  font-weight: 500;
+  color: #696969;
+  text-align: right;
+}
+
+.commentReply {
+  text-align: left;
+  display: flex;
+}
+
+.commentReply span {
+  font-size: 20px;
+  font-weight: 900;
+  margin: 13px 10px 0;
+}
+
+.commentListNumber {
+  width: 100%;
+}
+
+.commentListNumber ul {
+  display: flex;
+  justify-content: center;
+}
+
+.commentListNumber ul li {
+  margin: 0 6px;
+  border: 1px solid #adadad;
+  padding: 6px 10px;
+}
+
+.commentListNumber ul li a {
+  color: #333333;
+}
+
+.ql-editor img{
+ max-width: 100%;
+}
+
+.ql-editor {
+  margin: 10px 0 50px;
+}
+
+/*미디어쿼리*/
+@media (max-width: 1290px) {
+  #loadPage {
+    width: 1025px;
+  }
+  #loadPage .loadPageInner {
+    padding: 0 10px;
+  }
+}
+
+@media (max-width: 1024px) {
+  #loadPage {
+    width: 961px;
+  }
+}
+
+@media (max-width: 960px) {
+  #loadPage {
+    width: 769px;
+  }
+}
+
+@media (max-width: 768px) {
+  #loadPage {
+    width: 641px;
+  }
+}
+
+@media (max-width: 640px) {
+  #loadPage {
+    width: 581px;
+  }
+}
+
+@media (max-width: 580px) {
+  #loadPage {
+    width: 100%;
+  }
+  #loadPage h2 {
+    font-size: 18px;
+  }
+  #loadPage div .loadPageTop {
+    font-size: 14px;
+  }
+  #loadPage .loadPageInner {
+    padding: 0px;
+  }
+  #loadPage .loadPageInner h2{
+    padding: 0 10px 20px;
+  }
+  .revise {
+    padding: 0 10px;
+  }
+  .revise button {
+    padding: 5px 10px;
+    margin: 50px 0 50px 10px;
+  }
+  .comment, .commentNew {
+    padding: 0 10px;
+  }
+  .commentUser p {
+    font-size: 16px;
+    margin: 14px 0;
+  }
+  .commentUser p i {
+    font-size: 16px;
+  }
+  input {
+    height: 28px;
+  }
+  input::placeholder {
+    font-size: 14px;
+  }
+  textarea::placeholder {
+    font-size: 14px;
+  }
+  .btnBox {
+    padding: 7px 14px;
+  }
+}
+
+@media (max-width: 375px) {
+  #loadPage h2 {
+    font-size: 16px;
+  }
+  #loadPage div .loadPageTop {
+    font-size: 12px;
+  }
+  #loadPage > div > div h3 span {
+    margin-left: 5px;
+  }
+  .commentUser p {
+    font-size: 14px;
+  }
+  .commentUser p i {
+    font-size: 14px;
+  }
+  .commentUser p:nth-of-type(3) {
+    font-size: 12px;
+  }
+  input {
+    height: 25px;
+  }
+  textarea::placeholder {
+    font-size: 12px;
+  }
+  input::placeholder {
+    font-size: 12px;
+  }
+}
+
+@media (max-width: 300px) {
+  #loadPage > div > div h3 span {
+    margin-left: 2px;
+  }
+}

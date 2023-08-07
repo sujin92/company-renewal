@@ -1,0 +1,207 @@
+<!DOCTYPE html>
+<html lang="ko">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    
+
+
+    <link rel="stylesheet" href="/index.css" />
+    <link rel="stylesheet" href="technologyPage.css" />
+    <link
+      rel="shortcut icon"
+      type="image/png"
+      href="/favicon/apple-icon-180x180.png"
+    />
+    <!-- lodash -->
+    <script
+      src="https://cdnjs.cloudflare.com/ajax/libs/lodash.js/4.17.21/lodash.min.js"
+      integrity="sha512-WFN04846sdKMIP5LKNphMaWzU7YpMyCU245etK3g/2ARYbPK9Ub18eG+ljU96qKRCWh+quCY7yefSmlkQw1ANQ=="
+      crossorigin="anonymous"
+      referrerpolicy="no-referrer"
+    ></script>
+    <!-- 폰트 -->
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Noto+Sans+KR:wght@100;300;400;500;700;900&family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500&display=swap"
+      rel="stylesheet"
+    />
+    <!--animate style-->
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css"
+    />
+    <!-- 폰트어썸 -->
+    <script
+      src="https://kit.fontawesome.com/cad96521f3.js"
+      crossorigin="anonymous"
+    ></script>
+
+    <script src="/js/jquery-1.10.2.min.js"></script>
+    <script src="/js/main.js"></script>
+    <script src="/js/tab.js"></script>
+    <script src="/js/auth.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/waypoints/4.0.1/jquery.waypoints.min.js"></script>
+
+    <title>WIMIR</title>
+  </head>
+  <body>
+    <!-- header -->
+    <div id="header"></div>
+    <!-- 퀵메뉴 -->
+    <div class="quickmenu" id="quickmenu"></div>
+
+    <section id="technology">
+      <div class="technologyTop">
+        <li
+          class="technologyImg"
+        ></li>
+        <h2 class="animate__animated animate__fadeInUp">기술현황</h2>
+      </div>
+
+      <div class="wrap">
+        <div class="tabWrap">
+          <div class="tab">
+            <ul>
+              <li class="technologytab">
+                <a
+                  class="tablinks result"
+                  onclick="opentab(event, 'result')"
+                  id="defaultOpen"
+                >
+                  수행실적
+                </a>
+              </li>
+              <li>
+                <a class="tablinks confirm" onclick="opentab(event, 'confirm')">
+                  인증현황
+                </a>
+              </li>
+              <li>
+                <a
+                  class="tablinks material"
+                  onclick="opentab(event, 'material')"
+                >
+                  자료실
+                </a>
+              </li>
+            </ul>
+          </div>
+        </div>
+
+        <div class="dropdownMobile">
+          <button onclick="myFunction()" class="dropbtn">기술현황<i class="fa fa-caret-down"></i></button>
+          <div id="menuDropdown" class="dropdown-content">
+            <a href="/page/technologyPage/technologyPage.html?id=result">수행실적</a>
+            <a href="/page/technologyPage/technologyPage.html?id=confirm">인증현황</a>
+            <a href="/page/technologyPage/technologyPage.html?id=material">자료실</a>
+          </div>
+        </div>
+
+        <div id="result" class="tabcontent">
+          <div class="resultSection01">
+            <div class="resultText">
+              <h2>수행실적<span>.</span></h2>
+            </div>
+            <div class="introduceSearch resultSearch">
+              <input type="text" id="search" placeholder="검색어를 입력해주세요" class="search" />
+              <i id="search_btn" class="fa-solid fa-magnifying-glass"></i>
+              <a href="./technologyWritePage.html" class="write">글쓰기</a>
+            </div>
+
+            <div class="resultList">
+              <div class="resultListTop">
+                <p>총 <span id="boardCount">5</span>건<em>의 게시물이 있습니다.</em></p>
+                <select name="sort" id="sort">
+                  <option value="최신순">최신순</option>
+                  <option value="조회순">조회순</option>
+                  <option value="업데이트순">업데이트순</option>
+                </select>
+              </div>
+              <div id="resultListBottom" class="resultListBottom">
+                
+              </div>
+              <div id="pagination" class="listNumber">
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <div id="confirm" class="tabcontent">
+          <div class="confirmInner">
+            <div class="resultText">
+              <h2>인증현황<span>.</span></h2>
+            </div>
+            <div class="certified">
+              <h3>WIMIR 인증서</h3>
+              <div>
+                <img src="/images/certified01.jpg" alt="인증서" />
+                <img src="/images/certified02.jpg" alt="인증서" />
+                <img src="/images/certified03.jpg" alt="인증서" />
+                <img src="/images/certified04.jpg" alt="인증서" />
+                <img src="/images/certified05.jpg" alt="인증서" />
+                <img src="/images/certified06.jpg" alt="인증서" />
+                <img src="/images/certified07.jpg" alt="인증서" />
+              </div>
+            </div>
+            <div class="certified">
+              <h3>WIMIR 특허증</h3>
+              <div>
+                <img src="/images/certified08.jpg" alt="인증서" />
+              </div>
+            </div>
+            <div class="certified">
+              <h3>WIMIR 등록증</h3>
+              <div>
+                <img src="/images/certified09.jpg" alt="인증서" />
+                <img src="/images/certified10.jpg" alt="인증서" />
+                <img src="/images/certified11.jpg" alt="인증서" />
+                <img src="/images/certified12.jpg" alt="인증서" />
+                <img src="/images/certified13.jpg" alt="인증서" />
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <div id="material" class="tabcontent">
+          <div class="noticeSection01">
+            <div class="noticeText resultText">
+              <h2>자료실<span>.</span></h2>
+            </div>
+            <div class="introduceSearch resultSearch">
+              <input type="text" id="search2" placeholder="검색어를 입력해주세요" class="search" />
+              <i id="search_btn2" class="fa-solid fa-magnifying-glass"></i>
+              <a href="./technologyWritePage.html" class="write">글쓰기</a>
+            </div>
+
+            <div class="noticeList resultList">
+              <div class="noticeListTop resultListTop">
+                <p>총 <span id="boardCount">5</span>건<em>의 게시물이 있습니다.</em></p>
+                <select name="sort" id="sort2">
+                  <option value="최신순">최신순</option>
+                  <option value="조회순">조회순</option>
+                  <option value="업데이트순">업데이트순</option>
+                </select>
+              </div>
+
+              <div id="noticeListBottom" class="noticeListBottom">
+                
+              </div>
+
+              <div id="pagination" class="listNumber">
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- footer -->
+    <div id="footer"></div>
+
+    <script src="/js/common.js"></script>
+  </body>
+  <script src="./technologyPage.js"></script>
+</html>

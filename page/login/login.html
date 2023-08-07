@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+  <link rel="stylesheet" href="./login.css" />
+  <link rel="shortcut icon" type="image/png" href="/favicon/apple-icon-180x180.png" />
+  <title>WIMIR</title>
+  <script src="/js/jquery-1.10.2.min.js"></script>
+  <script src="./login.js"></script>
+</head>
+<body>
+  <section class="adminSection">
+    <div class="loginForm">
+      <span class="name">LOGIN</span>
+      <div class="inputWrap">
+        <div class="input">
+          <span>ID : <input id="loginID" type="text"></span>
+          <span>PW : <input id="loginPW" type="password"></span>
+        </div>
+        <button id="loginButton">확인</button>
+      </div>
+    </div>
+    <span class="helpComment">다중 접속 시 먼저 접속한 관리자는 자동으로 로그아웃 됩니다.</span>
+  </section>
+</body>
+</html>

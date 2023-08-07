@@ -1,0 +1,211 @@
+<!DOCTYPE html>
+<html lang="ko">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+
+
+    <link rel="stylesheet" href="/index.css" />
+    <link rel="stylesheet" href="communityPage.css" />
+    <link rel="shortcut icon" type="image/png" href="/favicon/apple-icon-180x180.png" />
+    <!-- lodash -->
+    <script
+      src="https://cdnjs.cloudflare.com/ajax/libs/lodash.js/4.17.21/lodash.min.js"
+      integrity="sha512-WFN04846sdKMIP5LKNphMaWzU7YpMyCU245etK3g/2ARYbPK9Ub18eG+ljU96qKRCWh+quCY7yefSmlkQw1ANQ=="
+      crossorigin="anonymous"
+      referrerpolicy="no-referrer"
+    ></script>
+    <!-- 폰트 -->
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Noto+Sans+KR:wght@100;300;400;500;700;900&family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500&display=swap"
+      rel="stylesheet"
+    />
+    <!--animate style-->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css" />
+    <!-- 폰트어썸 -->
+    <script src="https://kit.fontawesome.com/cad96521f3.js" crossorigin="anonymous"></script>
+
+    <script src="/js/jquery-1.10.2.min.js"></script>
+    <script src="/js/main.js"></script>
+    <script src="/js/tab.js"></script>
+    <script src="/js/auth.js"></script>
+
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/waypoints/4.0.1/jquery.waypoints.min.js"></script>
+
+    <title>WIMIR</title>
+  </head>
+  <body>
+    <!-- header -->
+    <div id="header"></div>
+    <!-- 퀵메뉴 -->
+    <div class="quickmenu" id="quickmenu"></div>
+
+    <section id="community">
+      <div class="communityTop">
+        <li class="communityImg"></li>
+        <h2 class="animate__animated animate__fadeInUp">커뮤니티</h2>
+      </div>
+
+      <div class="wrap">
+        <div class="tabWrap">
+          <div class="tab">
+            <ul>
+              <li class="communitytab">
+                <a class="tablinks introduce" onclick="opentab(event, 'introduce')" id="defaultOpen"> 제품소개 </a>
+              </li>
+              <li>
+                <a class="tablinks information" onclick="opentab(event, 'information')"> 정보공유 </a>
+              </li>
+              <li>
+                <a class="tablinks sns" onclick="opentab(event, 'sns')"> 공식 SNS </a>
+              </li>
+              <li>
+                <a class="tablinks news" onclick="opentab(event, 'news')"> NEWS </a>
+              </li>
+            </ul>
+          </div>
+        </div>
+
+        <div class="dropdownMobile">
+          <button onclick="myFunction()" class="dropbtn">커뮤니티<i class="fa fa-caret-down"></i></button>
+          <div id="menuDropdown" class="dropdown-content">
+            <a href="/page/communityPage/communityPage.html?id=introduce">제품소개</a>
+            <a href="/page/communityPage/communityPage.html?id=information">정보공유</a>
+            <a href="/page/communityPage/communityPage.html?id=sns">공식 SNS</a>
+            <a href="/page/communityPage/communityPage.html?id=news">NEWS</a>
+          </div>
+        </div>
+
+        <div id="introduce" class="tabcontent">
+          <div class="introduceSection01">
+            <div class="introduceText resultText">
+              <h2>제품소개<span>.</span></h2>
+            </div>
+            <div class="introduceSearch resultSearch">
+              <input type="text" id="search" placeholder="검색어를 입력해주세요" class="search" />
+              <i id="search_btn" class="fa-solid fa-magnifying-glass"></i>
+              <a href="/page/writePage.html" class="write">글쓰기</a>
+            </div>
+
+            <div class="introduceList resultList">
+              <div class="introduceListTop resultListTop">
+                <p>총 <span id="boardCount">0</span>건<em>의 게시물이 있습니다.</em></p>
+                <select name="sort">
+                  <option value="최신순">최신순</option>
+                  <option value="조회순">조회순</option>
+                  <option value="업데이트순">업데이트순</option>
+                </select>
+              </div>
+
+              <div id="introduceListBottom" class="introduceListBottom">
+              </div>
+              <div id="pagination" class="listNumber">
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <div id="information" class="tabcontent">
+          <div class="introduceSection01">
+            <div class="introduceText resultText">
+              <h2>정보공유<span>.</span></h2>
+            </div>
+            
+            <div class="introduceSearch resultSearch">
+              <input type="text" id="search" placeholder="검색어를 입력해주세요" class="search" />
+              <i id="search_btn" class="fa-solid fa-magnifying-glass"></i>
+              <a href="/page/writePage.html" class="write">글쓰기</a>
+            </div>
+
+            <div class="introduceList resultList">
+              <div class="introduceListTop resultListTop">
+                <p>총 <span id="boardCount">0</span>건<em>의 게시물이 있습니다.</em></p>
+                <select name="sort">
+                  <option value="최신순">최신순</option>
+                  <option value="조회순">조회순</option>
+                  <option value="업데이트순">업데이트순</option>
+                </select>
+              </div>
+
+              <div id="infomationListBottom" class="introduceListBottom">
+              </div>
+              <div id="pagination" class="listNumber">
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <div id="sns" class="tabcontent">
+          <div class="introduceSection01">
+            <div class="introduceText resultText">
+              <h2>공식 SNS<span>.</span></h2>
+            </div>
+            <div class="introduceSearch resultSearch">
+              <input type="text" id="search" placeholder="검색어를 입력해주세요" class="search" />
+              <i id="search_btn" class="fa-solid fa-magnifying-glass"></i>
+              <a href="/page/writePage.html" class="write">글쓰기</a>
+            </div>
+
+            <div class="introduceList resultList">
+              <div class="introduceListTop resultListTop">
+                <p>총 <span id="boardCount">0</span>건<em>의 게시물이 있습니다.</em></p>
+                <select name="sort">
+                  <option value="최신순">최신순</option>
+                  <option value="조회순">조회순</option>
+                  <option value="업데이트순">업데이트순</option>
+                </select>
+              </div>
+
+              <div id="snsBottom" class="snsBottom">
+                
+              </div>
+              <div id="pagination" class="listNumber">
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <div id="news" class="tabcontent">
+          <div class="introduceSection01">
+            <div class="introduceText resultText">
+              <h2>NEWS<span>.</span></h2>
+            </div>
+            <div class="introduceSearch resultSearch">
+              <input type="text" id="search" placeholder="검색어를 입력해주세요" class="search" />
+              <i id="search_btn" class="fa-solid fa-magnifying-glass"></i>
+              <a href="/page/writePage.html" class="write">글쓰기</a>
+            </div>
+
+            <div class="introduceList resultList">
+              <div class="introduceListTop resultListTop">
+                <p>총 <span id="boardCount">0</span>건<em>의 게시물이 있습니다.</em></p>
+                <select name="sort">
+                  <option value="최신순">최신순</option>
+                  <option value="조회순">조회순</option>
+                  <option value="업데이트순">업데이트순</option>
+                </select>
+              </div>
+
+              <div id="newsBottom" class="snsBottom">
+                
+              </div>
+              <div id="pagination" class="listNumber">
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- footer -->
+    <div id="footer"></div>
+
+    <script src="/js/common.js"></script>
+  </body>
+
+  <script src="./test.js"></script>
+</html>

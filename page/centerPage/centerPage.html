@@ -1,0 +1,196 @@
+<!DOCTYPE html>
+<html lang="ko">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+
+
+    <link rel="stylesheet" href="/index.css" />
+    <link rel="stylesheet" href="centerPage.css" />
+    <link rel="shortcut icon" type="image/png" href="/favicon/apple-icon-180x180.png" />
+    <!-- lodash -->
+    <script
+      src="https://cdnjs.cloudflare.com/ajax/libs/lodash.js/4.17.21/lodash.min.js"
+      integrity="sha512-WFN04846sdKMIP5LKNphMaWzU7YpMyCU245etK3g/2ARYbPK9Ub18eG+ljU96qKRCWh+quCY7yefSmlkQw1ANQ=="
+      crossorigin="anonymous"
+      referrerpolicy="no-referrer"
+    ></script>
+    <!-- 폰트 -->
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Noto+Sans+KR:wght@100;300;400;500;700;900&family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500&display=swap"
+      rel="stylesheet"
+    />
+    <!--animate style-->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css" />
+    <!-- 폰트어썸 -->
+    <script src="https://kit.fontawesome.com/cad96521f3.js" crossorigin="anonymous"></script>
+
+    <script src="/js/jquery-1.10.2.min.js"></script>
+    <script src="/js/main.js"></script>
+    <script src="/js/dropdown.js"></script>
+    <script src="/js/tab.js"></script>
+    <script src="/js/auth.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/waypoints/4.0.1/jquery.waypoints.min.js"></script>
+
+    <title>WIMIR</title>
+  </head>
+  <body>
+    <!-- header -->
+    <div id="header"></div>
+    <!-- 퀵메뉴 -->
+    <div class="quickmenu" id="quickmenu"></div>
+
+    <section id="center">
+      <div class="centerTop">
+        <li class="centerImg"></li>
+        <h2 class="animate__animated animate__fadeInUp">고객지원</h2>
+      </div>
+
+      <div class="wrap">
+        <div class="tabWrap">
+          <div class="tab">
+            <ul>
+              <li class="centertab">
+                <a class="tablinks inquiry" onclick="opentab(event, 'inquiry')" id="defaultOpen"> 문의하기 </a>
+              </li>
+              <li>
+                <a class="tablinks notice" onclick="opentab(event, 'notice')"> 공지사항 </a>
+              </li>
+              <li>
+                <a class="tablinks faq" onclick="opentab(event, 'faq')"> FAQ </a>
+              </li>
+            </ul>
+          </div>
+        </div>
+
+        <div class="dropdownMobile">
+          <button onclick="myFunction()" class="dropbtn"></button>
+          <div id="menuDropdown" class="dropdown-content">
+            <a href="/page/centerPage/centerPage.html?id=inquiry">문의하기</a>
+            <a href="/page/centerPage/centerPage.html?id=notice">공지사항</a>
+            <a href="/page/centerPage/centerPage.html?id=faq">FAQ</a>
+          </div>
+        </div>
+
+        <div id="notice" class="tabcontent">
+          <div class="noticeSection01">
+            <div class="noticeText">
+              <h2>공지사항<span>.</span></h2>
+            </div>
+            <div class="noticeSearch">
+              <input type="text" id="search" placeholder="검색어를 입력해주세요" class="search" />
+              <i id="search_btn"  class="fa-solid fa-magnifying-glass noticeI"></i>
+              <a href="./centerWritePage.html" class="noticeWrite">글쓰기</a>
+            </div>
+
+            <div class="noticeList">
+              <div class="noticeListTop">
+                <p>총 <span id="boardCount">0</span>건<em>의 게시물이 있습니다.</em></p>
+                <select name="sort" class="sort">
+                  <option value="최신순">최신순</option>
+                  <option value="조회순">조회순</option>
+                  <option value="업데이트순">업데이트순</option>
+                </select>
+              </div>
+
+              <div class="noticeListBottom" id="noticeListBottom">
+              </div>
+
+              <div id="pagination" class="listNumber">
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <div id="inquiry" class="tabcontent">
+          <div class="noticeSection01">
+            <div class="noticeText">
+              <h2>문의하기<span>.</span></h2>
+            </div>
+            <div class="noticeSearch">
+              <a href="./inquiryPage.html" class="write inquiryBn" id="inquiryWrit">문의하기</a>
+            </div>
+
+            <div class="noticeList inquiryList">
+              <div class="noticeListTop inquiryListTop">
+                <p>총 <span id="boardCount">0</span>건<em>의 게시물이 있습니다.</em></p>
+              </div>
+
+              <div class="noticeListBottom inquiryBottom" id="inquiryBottom">
+                
+              </div>
+              <div id="pagination" class="listNumber">
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <div id="faq" class="tabcontent">
+          <div class="noticeSection01">
+            <div class="noticeText">
+              <h2>FAQ<span>.</span></h2>
+            </div>
+
+            <div class="faqList">
+              <button type="button" class="collapsible" onclick="collapse(this);"><i class="fa-solid fa-q"></i>엘라디스가 무엇인가요?</button>
+              <div class="content">
+                <i class="fa-solid fa-a"></i>
+                <p>
+                  엘라디스는 제조 AI 팩토리 플랫폼으로 설비로부터 제조 데이터를 수집하여 설비 상태를 실시간 모니터링하는 시스템 입니다. 공장 환경과 설비 성능, 생산 공정 이상을 실시간으로 감지하고 즉각 알림을 받을 수 있습니다. 또한 엘라디스 OSM(작업일정관리)을 통해 수기로 작성하던 작업지시서와 생산일지를 보다 쉽게 관리하고 저장할 수 있습니다.
+                </p>
+              </div>
+
+              <button type="button" class="collapsible" onclick="collapse(this);"><i class="fa-solid fa-q"></i>스마트팩토리 정부 지원<br><em>사업도 진행하나요?</em></button>
+              <div class="content">
+                <i class="fa-solid fa-a"></i>
+                <p>
+                  물론입니다! 저희 위미르(주)는 스마트팩도리 정부 지원 사업의 공급 기업으로, 스마트팩도리를 구축할 수 있는 제조 AI 빅데이터 플랫폼인 ELADIS와 FEMS 솔루션을 제공하고 있습니다. 그뿐만 아니라 창원 스마트팩토리 정부 지원 사업에서 가장 중요한 사업 계획서 또한 제조업의 특성에 맞게 작성을 도와드리고 있습니다.
+                </p>
+              </div>
+
+              <button type="button" class="collapsible" onclick="collapse(this);"><i class="fa-solid fa-q"></i>스마트공장 제조데이터<br><em>활용은 어떻게 하나요?</em></button>
+              <div class="content">
+                <i class="fa-solid fa-a"></i>
+                <p>
+                  창원 제조업 데이터를 분석하면 불량률이 낮아지고, 매출을 상승시킬 수 있습니다. 제조 데이터를 활용하는 가장 기본적인 방법으로 모니터링이 있습니다. 제조 데이터를 수집하고 분석하여 설비가 가장 최적의 상태를 유지할 수 있도록 하는 것인데요, 데이터 모니터링을 하게 되면 다음과 같은 결과를 얻을 수 있습니다.<br>
+                  <br>
+                  1. 설비에 이상이 생겼을 때 바로바로 알림을 받아 빠른 대응이 가능하여 장애 시간을 최소화해 가동률을 상승시킬 수 있습니다.<br>
+                  2. 실시간으로 설비 작업자와 생산 제품을 파악할 수 있습니다.<br>
+                  3. 설비별로 가동률, 가동 현황을 체크하고 공장 전체의 가동률도 체크하여 생산 계획을 수립할 수 있습니다.<br>
+                  4. 위미르 엘라디스는 클라우드 서버에 데이터를 저장하기 때문에 안정적으로 S/W 관리가 가능합니다.<br>
+                  5. 공장 외부에서도 공장 상황을 체크할 수 있도록 모바일 APP 서비스도 지원하고 있습니다.
+                </p>
+              </div>
+
+              <button type="button" class="collapsible" onclick="collapse(this);"><i class="fa-solid fa-q"></i>FEMS가 무엇인가요?</button>
+              <div class="content">
+                <i class="fa-solid fa-a"></i>
+                <p>
+                  FEMS는 공장 에너지 관리 시스템으로 일선 공장 곳곳에 센서를 설치하여 공장 내 모든 라인별 에너지 사용량 데이터를 세분화하여 수집하고, 수집된 데이터를 분석 후 최적으로 관리하여 에너지 절감 및 생산성 향상을 제공합니다. FEMS는 에너지 절역이라는 목적을 달성하기 위해 에너지 모니터링, 현황 분석, 수요 예측, 에너지 수요 공급 최적화 이렇게 네 개의 시스템으로 구성됩니다.
+                </p>
+              </div>
+
+              <button type="button" class="collapsible" onclick="collapse(this);"><i class="fa-solid fa-q"></i>타 지역도 무료 컨설팅이<br><em>가능한가요?</em></button>
+              <div class="content">
+                <i class="fa-solid fa-a"></i>
+                <p>
+                  위미르(주)에서는 경남 소재 제조업을 대상으로 제조업 컨설팅 1회를 무료로 제공하고 있습니다. 그 외 지역에 따라 할인 적용되며, 20~30만 원 할인된 금액으로 컨설팅을 제공해 드리고 있습니다.
+                </p>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- footer -->
+    <div id="footer"></div>
+
+    <script src="/js/common.js"></script>
+  </body>
+  <script src="./centerPage.js"></script>
+</html>
